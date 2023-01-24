@@ -1,0 +1,215 @@
+<body class="demo-disable-bg-image">
+  <div id="sampleDemo" class="demo-container">
+    
+    
+    <div id="container">
+      <oj-drawer-layout start-opened="{{startOpened}}" class="demo-full-height">
+        <div id="containerDrawerHeight" class="demo-padding drawerHeight-desativo" >
+        <!-- 
+          <div id="conveyorbelt-action-cards-example" class="oj-flex">
+            <oj-conveyor-belt id="conveyorBelt" class="oj-lg-9 oj-md-9 oj-sm-12 oj-flex-item">
+              <oj-bind-for-each data="[[users]]">
+                <template data-oj-as="user">
+                  <oj-action-card class="demo-card oj-sm-margin-12x-vertical oj-sm-margin-2x-horizontal">
+                    <oj-button id="buttonOpener" display="icons" on-oj-action="[[startToggle]]">
+                      <div class="oj-flex oj-sm-flex-direction-column">
+                        <div class="titleCardContainer">
+                          <span>
+                            <oj-bind-text class="titleCardLabel">Nome do Produto:</oj-bind-text>
+                            <oj-bind-text value="[[user.data.name]]"></oj-bind-text>
+                          </span>
+                        </div>
+                        <span>
+                          <oj-bind-text class="infoCardLabel">Quantidade:</oj-bind-text>
+                          <oj-bind-text class="infoCard" value="[[user.data.qtd]]"></oj-bind-text>
+                        </span>
+                        <span>
+                          <oj-bind-text class="infoCardLabel">% Desconto:</oj-bind-text>
+                          <oj-bind-text class="infoCard" value="[[user.data.desc]]"></oj-bind-text>
+                        </span>
+                        <span>
+                          <oj-bind-text class="infoCardLabel">Valor do desconto: R$</oj-bind-text>
+                          <oj-bind-text class="infoCard" value="[[user.data.vl_desc]]"></oj-bind-text>
+                        </span>
+                        <span>
+                          <oj-bind-text class="infoCardLabel">Pontuação de preço: R$</oj-bind-text>
+                          <oj-bind-text class="infoCard" value="[[user.data.preco]]"></oj-bind-text>
+                        </span>
+
+                      </div>
+                    </oj-button>
+                  </oj-action-card>
+                </template>
+              </oj-bind-for-each>
+            </oj-conveyor-belt>
+            
+          </div> -->
+      </div>
+
+        <div slot="start" class="demo-drawer-start drawerContainer" id="demo-drawer-start">
+          <div class="demo-drawer-header drawerHeader">
+            <div class="titleContainerDrawer">
+              <div class="titleDrawer">
+                <h3>CPQ-223</h3>
+                <h6>TRANSAÇÂO</h6>
+              </div>
+              <!-- <div> ICONE DE FECHAR
+                <span slot="startIcon" class="oj-ux-ico-close"></span>
+              </div> -->
+            </div>
+            <div class='drawerBody'>
+              <div>
+                <h6>Detalhes da Transação</h6>
+              </div>
+              <div>
+                <oj-form-layout direction="row" max-columns="4">
+                  <oj-label for="totalList">Cotação #</oj-label>
+                  <oj-input-text id="totalList"></oj-input-text>
+                  <oj-label for="totalDescont">Produto</oj-label>
+                  <oj-input-text id="totalDescont"></oj-input-text>
+                  <oj-label for="totalNet">Descrição</oj-label>
+                  <oj-input-text id="totalNet"></oj-input-text>
+                  <oj-label for="totalNet">Quantidade</oj-label>
+                  <oj-input-text id="totalNet"></oj-input-text>
+                  <oj-label for="totalNet">Desconto</oj-label>
+                  <oj-input-text id="totalNet"></oj-input-text>
+                  <oj-label for="totalNet">Tipo de desconto</oj-label>
+                  <oj-input-text id="totalNet"></oj-input-text>
+                  <oj-label for="totalNet">Preço Liquido</oj-label>
+                  <oj-input-text id="totalNet"></oj-input-text>
+                  <oj-label for="totalNet">Pontuação de preço</oj-label>
+                  <oj-input-text id="totalNet"></oj-input-text>
+                </oj-form-layout>
+              </div>
+              <div class="containerButtonDrawer">
+                <oj-button id="buttonSalvar" display="icons" chroming="borderless" on-oj-action="[[startToggle]]">
+                  Salvar
+                </oj-button>
+                <oj-button id="buttonDescartar" display="icons" chroming="borderless" on-oj-action="[[startToggle]]">
+                  Descartar alterações
+                </oj-button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </oj-drawer-layout>
+
+  </div>
+
+     <div id="componentDemoContent" class="containerFirst" style="width: 1px; min-width: 100%;">
+
+      <div id="containerDrawer">
+        <div id="demo-container">
+          <div class="demo-controls">
+            <oj-button id="toggleBottomButton" class="buttonConfig" on-oj-action="[[bottomToggle]]">
+              <span >
+                <img src="../../../css/images/overflow.svg" style="width: 25; height: 25px">
+              </span>
+            </oj-button>
+          </div>
+        </div>
+        <oj-drawer-popup class="demo-drawer-bottom modelContainer" edge="bottom" opened="{{bottomOpened}}">
+          <div class="demo-padding modelHead">
+            <oj-button id="bottomButtonCloser" on-oj-action="[[bottomToggle]]">
+              <span >
+                <img src="../../../css/images/seta.svg" style="width: 25; height: 25px">
+              </span>
+            </oj-button>
+          </div>
+          <div class="modelBody">
+            <oj-button class="buttonModel">Salvar</oj-button>
+            <oj-button class="buttonModel">Filtro</oj-button>
+            <oj-button class="buttonModel">Filtro Avançado</oj-button>
+            <oj-button class="buttonModel">Editar</oj-button>
+            <oj-button class="buttonModel">Adicionar</oj-button>
+            <oj-button class="buttonModel">Adição rápida</oj-button>
+          </div>
+        </oj-drawer-popup>
+      </div>  
+
+
+       <div id="accordionPage" data-oj-binding-provider="none">
+        <oj-accordion id="a1">
+          <oj-collapsible id="c1" class="bodyAccordion">
+            <div slot="header" class="accordionHeaderOne">
+              <div class="contentHeaderAccordion">
+                <p style="color: #12623E">Detalhes da transação</p>
+              </div>
+            </div>
+            <div class="containerTeste">
+              <div id="conveyorbelt-action-cards-example" class="oj-flex">
+                <oj-conveyor-belt id="conveyorBelt" class="oj-lg-9 oj-md-9 oj-sm-12 oj-flex-item">
+                  <oj-bind-for-each data="[[users]]">
+                    <template data-oj-as="user">
+                      <oj-action-card class="demo-card oj-sm-margin-12x-vertical oj-sm-margin-2x-horizontal">
+                        <oj-button id="buttonOpener" display="icons" on-oj-action="[[startToggle]]">
+                          <div class="oj-flex oj-sm-flex-direction-column">
+                            <div class="titleCardContainer">
+                              <span>
+                                <oj-bind-text class="titleCardLabel">Nome do Produto:</oj-bind-text>
+                                <oj-bind-text value="[[user.data.name]]"></oj-bind-text>
+                              </span>
+                            </div>
+                            <span>
+                              <oj-bind-text class="infoCardLabel">Quantidade:</oj-bind-text>
+                              <oj-bind-text class="infoCard" value="[[user.data.qtd]]"></oj-bind-text>
+                            </span>
+                            <span>
+                              <oj-bind-text class="infoCardLabel">% Desconto:</oj-bind-text>
+                              <oj-bind-text class="infoCard" value="[[user.data.desc]]"></oj-bind-text>
+                            </span>
+                            <span>
+                              <oj-bind-text class="infoCardLabel">Valor do desconto: R$</oj-bind-text>
+                              <oj-bind-text class="infoCard" value="[[user.data.vl_desc]]"></oj-bind-text>
+                            </span>
+                            <span>
+                              <oj-bind-text class="infoCardLabel">Pontuação de preço: R$</oj-bind-text>
+                              <oj-bind-text class="infoCard" value="[[user.data.preco]]"></oj-bind-text>
+                            </span>
+    
+                          </div>
+                        </oj-button>
+                      </oj-action-card>
+                    </template>
+                  </oj-bind-for-each>
+                </oj-conveyor-belt>
+                
+              </div>
+            </div>
+            <div class="formContainer">
+              <oj-form-layout direction="row" max-columns="4">
+                <oj-label for="totalList">Nome da Cotação</oj-label>
+                <oj-input-text id="totalList" required="[[isRequired]]"></oj-input-text>
+                <oj-label for="totalDescont">Cotação #</oj-label>
+                <oj-input-text id="totalDescont" required="[[isRequired]]"></oj-input-text>
+                <oj-label for="totalNet">Versão</oj-label>
+                <oj-input-text id="totalNet" required="[[isRequired]]"></oj-input-text>
+              </oj-form-layout>
+            </div>
+          </oj-collapsible>
+        </oj-accordion>
+
+        <oj-accordion id="a2">
+          <oj-collapsible id="c2" class="bodyAccordion" expanded>
+            <h3 slot="header" style="color: #12623E" class="accordionHeaderTwo">Totais</h3>
+            <div>
+              <oj-form-layout direction="row" max-columns="4">
+                <oj-label for="totalList">Total (Lista)</oj-label>
+                <oj-input-text id="totalList" required="[[isRequired]]"></oj-input-text>
+                <oj-label for="totalDescont">Desconto Total</oj-label>
+                <oj-input-text id="totalDescont" required="[[isRequired]]"></oj-input-text>
+                <oj-label for="totalNet">Total (Net)</oj-label>
+                <oj-input-text id="totalNet" required="[[isRequired]]"></oj-input-text>
+              </oj-form-layout>
+            </div>
+          </oj-collapsible>
+        </oj-accordion>
+      </div> 
+
+
+  </div>   
+
+
+  </div>
+</body>

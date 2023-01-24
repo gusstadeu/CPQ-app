@@ -1,0 +1,64 @@
+<body class="demo-disable-bg-image">
+  <div id="sampleDemo" class=" demo-container">
+    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+
+      <div id="demo-container">
+        <header class="header-container">
+          <div class="header-content1">
+            <p>Oswaldo Cruz Química</p>
+          </div>
+          <div class="header-content2 contentInputCotacao">
+            <input type="text">
+            <span>
+              <img style="width: 30px;height: 30px;" src="../../css/images/lupa-icon.svg">
+            </span>
+          
+            <p>...</p>
+          </div>
+        </header>
+
+        <div id="conveyorbelt-action-cards-example" class="oj-flex">
+          <oj-conveyor-belt id="conveyorBelt" orientation="vertical" class="oj-lg-9 oj-md-9 oj-sm-12 oj-flex-item conveyorBeltContainer">
+            <oj-bind-for-each data="[[users]]" >
+              <template data-oj-as="user">
+                <oj-action-card class="demo-card oj-sm-margin-4x-vertical contentQuotes widthTotal">
+                  <a id="buttonOpener" href="?ojr=quotes"  selection="{{selection.path}}" display="icons" class="contentInfo" on-oj-action="[[startToggle]]">
+                    <div class="oj-flex oj-sm-flex-direction-column cardContainerCotacao">
+                      <div class="titleCardContainerCotacao">
+                        <span >
+                          <oj-bind-text class="titleCardTransacao">N° da Transação: </oj-bind-text>
+                          <oj-bind-text  value="[[user.data.name]]"></oj-bind-text>
+                        </span>
+                      </div>
+                      <span class="contentData">
+                        <oj-bind-text>Status: </oj-bind-text>
+                        <oj-bind-text  value="[[user.data.status]]"></oj-bind-text>
+                      </span>
+                      <span class="contentData">
+                        <oj-bind-text>Por:</oj-bind-text>
+                        <oj-bind-text  value="[[user.data.por]]"></oj-bind-text>
+                      </span>
+                      <span class="contentData">
+                        <oj-bind-text>Valor Total: R$</oj-bind-text>
+                        <oj-bind-text  value="[[user.data.v_total]]"></oj-bind-text>
+                      </span>
+                      <span class="contentData">
+                        <oj-bind-text>Versão: </oj-bind-text>
+                        <oj-bind-text  value="[[user.data.versao]]"></oj-bind-text>
+                      </span>
+
+                    </div>
+                  </a>
+                </oj-action-card>
+              </template>
+            </oj-bind-for-each>
+          </oj-conveyor-belt>
+        </div>
+
+    </div>
+
+
+
+  </div>
+  </div>
+</body>

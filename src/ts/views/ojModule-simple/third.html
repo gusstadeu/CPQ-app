@@ -1,0 +1,79 @@
+<body class="demo-disable-bg-image">
+    <div id="sampleDemo" class="demo-container">
+        <div id="componentDemoContent" class="containerFirst" style="width: 1px; min-width: 100%;">
+            <div id="containerDrawer">
+                <div id="demo-container">
+                    <div class="demo-controls">
+                        <oj-button id="toggleBottomButton" class="buttonConfig" on-oj-action="[[bottomToggle]]">
+                            <span >
+                                <img src="../../../css/images/overflow.svg" style="width: 25; height: 25px">
+                            </span>                        
+                        </oj-button>
+                    </div>
+                </div>
+                <oj-drawer-popup class="demo-drawer-bottom modelContainer" edge="bottom" opened="{{bottomOpened}}">
+                    <div class="demo-padding modelHead">
+                        <oj-button id="bottomButtonCloser" on-oj-action="[[bottomToggle]]">
+                            <span :class="oj-ux-ico-arrow-up-alt"></span>
+                        </oj-button>
+                    </div>
+                    <div class="modelBody">
+                        <oj-button class="buttonModel" >Salvar</oj-button>
+                        <oj-button class="buttonModel" >Filtro</oj-button>
+                        <oj-button class="buttonModel" >Filtro Avançado</oj-button>
+                        <oj-button class="buttonModel" >Editar</oj-button>
+                        <oj-button class="buttonModel" >Adicionar</oj-button>
+                        <oj-button class="buttonModel" >Adição rápida</oj-button>
+                    </div>
+                </oj-drawer-popup>
+            </div>
+
+            <div id="accordionPage" data-oj-binding-provider="none">
+                <oj-accordion id="a1">
+                    <oj-collapsible id="c1" class="bodyAccordion">
+                        <div slot="header" class="accordionHeaderOne">
+                            <div class="contentHeaderAccordion">
+                                <p style="color: #12623E">Aprovações</p>
+                            </div>
+                        </div>
+                        <div class="formContainer">
+                            <oj-form-layout max-columns="1" direction="row">
+                                <oj-checkboxset
+                                    id="rowDirectionEnabledCheckboxset"
+                                    class="oj-choice-direction-row checkContent">
+                                    <oj-label for="desktop" class="labelCheck">Exigir aprovação se marcado</oj-label>
+                                    <oj-option value="desktop" ></oj-option>
+                                </oj-checkboxset>
+                                <div class="buttonEnviarAprovacoes">
+                                    <oj-button class="button">Enviar</oj-button>
+                                    <oj-button class="button">Rejeição do cliente</oj-button>
+                                </div>
+                                
+                                <oj-label for="totalList">Status de  aprovação [Enviar]</oj-label>
+                                <p>Sem aprovação pendentes</p>
+
+                                <oj-label for="totalList">Revisão de aprovação [Enviar]</oj-label>
+                                <oj-input-number id="totalList" required="[[isRequired]]"></oj-input-number>
+                            
+                            </oj-form-layout>
+                        </div>
+                    </oj-collapsible>
+
+                    <oj-collapsible id="c3" class="bodyAccordion" >
+                        <h3 slot="header" style="color: #12623E" class="accordionHeaderTwo">Totais</h3>
+                        <div>
+                            <oj-form-layout direction="row" max-columns="4">
+                                <oj-label for="totalList">Total (Lista)</oj-label>
+                                <oj-input-text id="totalList" required="[[isRequired]]"></oj-input-text>
+                                <oj-label for="totalDescont">Desconto Total</oj-label>
+                                <oj-input-text id="totalDescont" required="[[isRequired]]"></oj-input-text>
+                                <oj-label for="totalNet">Total (Net)</oj-label>
+                                <oj-input-text id="totalNet" required="[[isRequired]]"></oj-input-text>
+                            </oj-form-layout>
+                        </div>
+                    </oj-collapsible>
+                </oj-accordion>
+            </div>        
+        </div>
+</div>
+</body>

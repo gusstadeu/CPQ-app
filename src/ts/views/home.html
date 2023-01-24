@@ -1,0 +1,35 @@
+<body class="demo-disable-bg-image">
+  <div id="sampleDemo" class="demo-container">
+    
+    <div id="moduleDemo">
+      
+
+      <div id="conveyorbelt-horizontal-example">
+        <div class="oj-flex">
+          <oj-conveyor-belt
+          id="conveyorBeltContainer"
+          class="oj-lg-6 oj-md-9 oj-sm-12 oj-flex-item">
+          <oj-buttonset-one class="oj-buttonset-width-auto tabsContainerHome" value="{{currentModule}}">
+            <oj-option id="sv1" class="tabsHome" value="one">Acrílico</oj-option>
+            <oj-option id="sv2" class="tabsHome" value="two">Poliéster</oj-option>
+            <oj-option id="sv3" class="tabsHome" value="third">Revenda</oj-option>
+            <oj-option id="sv4" class="tabsHome" value="four">Revenda</oj-option>
+            <oj-option id="sv5" class="tabsHome" value="five">Adesivo</oj-option>
+            <oj-option id="sv6" class="tabsHome" value="six">Revenda</oj-option>
+            <oj-option id="sv7" class="tabsHome" value="seven">Revenda</oj-option>
+            
+          </oj-buttonset-one>
+        </oj-conveyor-belt>
+        </div>
+      </div>
+
+        <oj-module
+          config="[[ModuleElementUtils.createConfig({name: 'ojModule-home/' + currentModule()})]]"
+          class="demo-height moduleContainer">
+        </oj-module>
+    </div> 
+
+      
+    </div>
+  </div>
+</body>

@@ -1,0 +1,20 @@
+<body class="demo-disable-bg-image">
+  <div id="sampleDemo" class="demo-container">
+    <div id="componentDemoContent" style="width: auto; margin: 0; padding: 0; border: none">
+      
+      <div id="moduleDemo"> 
+
+          <oj-buttonset-one class="oj-buttonset-width-auto tabsContainer" value="{{currentModule}}">
+            <oj-option id="sv1" class="tabs" value="first">Detalhes da Transação</oj-option>
+            <oj-option id="sv2" class="tabs" value="second">Info. Cliente</oj-option>
+            <oj-option id="sv3" class="tabs" value="third">Aprovações</oj-option>
+          </oj-buttonset-one>
+          
+        <oj-module
+          config="[[ModuleElementUtils.createConfig({name: 'ojModule-simple/' + currentModule()})]]"
+          class="demo-height moduleContainer"></oj-module>
+      </div>
+      
+    </div>
+  </div>
+</body>

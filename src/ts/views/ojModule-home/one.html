@@ -1,0 +1,154 @@
+<div id="accordionPage" class="accordionContainerOne" data-oj-binding-provider="none">
+  <oj-accordion id="a1">
+    <oj-collapsible id="c1" class="bodyAccordion" expanded>
+      <div slot="header" class="accordionHeaderOne">
+        <div class="contentHeaderAccordion">
+          <p style="color: #12623E; font-size: 15px">Adesivo</p>
+        </div>
+      </div>
+      <div class="containerTeste containerCardsHome" >
+        <div id="conveyorbelt-action-cards-example" class="oj-flex">
+          <oj-conveyor-belt id="conveyorBeltHome" class="oj-lg-9 oj-md-9 oj-sm-12 oj-flex-item">
+            <oj-bind-for-each data="[[users]]">
+              <template data-oj-as="user">
+                <oj-action-card class="demo-card oj-sm-margin-12x-vertical oj-sm-margin-2x-horizontal cardContainerHome">
+                  <oj-button id="buttonOpenerHome" display="icons" on-oj-action="[[startToggle]]">
+                    <div class="oj-flex oj-sm-flex-direction-column">
+                      <div class="titleCardContainerHome">
+                        <span>
+                          <img
+                          :src="[[user.data.image]]"
+                          width="200"
+                          height="100">
+                        </span>
+                      </div>
+                      <span class="contentDescriHome">
+                        <oj-bind-text class="infoCardLabelHome">Produto: </oj-bind-text>
+                        <oj-bind-text class="infoCardHome" value="[[user.data.name]]"></oj-bind-text>
+                      </span>
+
+
+                    </div>
+                  </oj-button>
+                </oj-action-card>
+              </template>
+            </oj-bind-for-each>
+          </oj-conveyor-belt>
+          
+        </div>
+      </div>
+
+    </oj-collapsible>
+  </oj-accordion>
+
+  <oj-accordion id="a2">
+    <oj-collapsible id="c2" class="bodyAccordion" >
+      <h3 slot="header" style="color: #12623E; font-size: 15px" class="accordionHeaderTwo">Barreira</h3>
+      <div class="containerTeste containerCardsHome" >
+        <div id="conveyorbelt-action-cards-example" class="oj-flex">
+          <oj-conveyor-belt id="conveyorBeltHome" class="oj-lg-9 oj-md-9 oj-sm-12 oj-flex-item">
+            <oj-bind-for-each data="[[users]]">
+              <template data-oj-as="user">
+                <oj-action-card class="demo-card oj-sm-margin-12x-vertical oj-sm-margin-2x-horizontal cardContainerHome">
+                  <oj-button id="buttonOpenerHome" display="icons" on-oj-action="[[startToggle]]">
+                    <div class="oj-flex oj-sm-flex-direction-column">
+                      <div class="titleCardContainerHome">
+                        <span>
+                          <img
+                          :src="[[user.data.image]]"
+                          width="200"
+                          height="100">
+                        </span>
+                      </div>
+                      <span class="contentDescriHome">
+                        <oj-bind-text class="infoCardLabelHome">Produto: </oj-bind-text>
+                        <oj-bind-text class="infoCardHome" value="[[user.data.name]]"></oj-bind-text>
+                      </span>
+
+
+                    </div>
+                  </oj-button>
+                </oj-action-card>
+              </template>
+            </oj-bind-for-each>
+          </oj-conveyor-belt>
+          
+        </div>
+      </div>
+    </oj-collapsible>
+  </oj-accordion>
+
+  <oj-accordion id="a3">
+    <oj-collapsible id="c3" class="bodyAccordion" >
+      <h3 slot="header" style="color: #12623E; font-size: 15px" class="accordionHeaderTwo">Couro</h3>
+      <div class="containerTeste containerCardsHome" >
+        <div id="conveyorbelt-action-cards-example" class="oj-flex">
+          <oj-conveyor-belt id="conveyorBeltHome" class="oj-lg-9 oj-md-9 oj-sm-12 oj-flex-item">
+            <oj-bind-for-each data="[[users]]">
+              <template data-oj-as="user">
+                <oj-action-card class="demo-card oj-sm-margin-12x-vertical oj-sm-margin-2x-horizontal cardContainerHome">
+                  <oj-button id="buttonOpenerHome" display="icons" on-oj-action="[[startToggle]]">
+                    <div class="oj-flex oj-sm-flex-direction-column">
+                      <div class="titleCardContainerHome">
+                        <span>
+                          <img
+                          :src="[[user.data.image]]"
+                          width="200"
+                          height="100">
+                        </span>
+                      </div>
+                      <span class="contentDescriHome">
+                        <oj-bind-text class="infoCardLabelHome">Produto: </oj-bind-text>
+                        <oj-bind-text class="infoCardHome" value="[[user.data.name]]"></oj-bind-text>
+                      </span>
+
+
+                    </div>
+                  </oj-button>
+                </oj-action-card>
+              </template>
+            </oj-bind-for-each>
+          </oj-conveyor-belt>
+          
+        </div>
+      </div>
+    </oj-collapsible>
+  </oj-accordion>
+
+  <oj-accordion id="a4">
+    <oj-collapsible id="c4" class="bodyAccordion">
+      <h3 slot="header" style="color: #12623E; font-size: 15px" class="accordionHeaderTwo">Espessantes</h3>
+      <div class="containerTeste containerCardsHome" >
+        <div id="conveyorbelt-action-cards-example" class="oj-flex">
+          <oj-conveyor-belt id="conveyorBeltHome" class="oj-lg-9 oj-md-9 oj-sm-12 oj-flex-item">
+            <oj-bind-for-each data="[[users]]">
+              <template data-oj-as="user">
+                <oj-action-card class="demo-card oj-sm-margin-12x-vertical oj-sm-margin-2x-horizontal cardContainerHome">
+                  <oj-button id="buttonOpenerHome" display="icons" on-oj-action="[[startToggle]]">
+                    <div class="oj-flex oj-sm-flex-direction-column">
+                      <div class="titleCardContainerHome">
+                        <span>
+                          <img
+                          :src="[[user.data.image]]"
+                          width="200"
+                          height="100">
+                        </span>
+                      </div>
+                      <span class="contentDescriHome">
+                        <oj-bind-text class="infoCardLabelHome">Produto: </oj-bind-text>
+                        <oj-bind-text class="infoCardHome" value="[[user.data.name]]"></oj-bind-text>
+                      </span>
+
+
+                    </div>
+                  </oj-button>
+                </oj-action-card>
+              </template>
+            </oj-bind-for-each>
+          </oj-conveyor-belt>
+          
+        </div>
+      </div>
+    </oj-collapsible>
+  </oj-accordion>
+</div> 
