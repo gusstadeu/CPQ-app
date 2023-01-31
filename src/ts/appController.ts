@@ -15,6 +15,7 @@ import Context = require("ojs/ojcontext");
 import "ojs/ojdrawerpopup";
 import { whenDocumentReady } from "ojs/ojbootstrap";
 import "ojs/ojinputtext";
+import Color = require("@oracle/oraclejet/dist/types/ojcolor");
 
 
 
@@ -62,7 +63,7 @@ class RootViewModel {
 
     const navData = [
       { path: "", redirect: "cotacao" },
-      { path: "home", detail: { label: "Home", title: 'Home', iconClass: "oj-ux-ico-home" } },
+      { path: "home", detail: { label: "Home", title: 'Oswaldo Cruz Química',color:'green', iconClass: "oj-ux-ico-home" } },
       { path: "contas", detail: { label: "Contas", title: 'contas', iconClass: "oj-ux-ico-building" } },
       { path: "cotacao", detail: { label: "Cotação", title: 'Relatório de cotação', iconClass: "oj-ux-ico-artifact-audit-file" } },
       { path: "perfil", detail: { label: "Perfil", title: 'perfil', iconClass: "oj-ux-ico-avatar" } },

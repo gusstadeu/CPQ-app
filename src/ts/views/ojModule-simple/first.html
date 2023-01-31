@@ -142,12 +142,12 @@
                 <oj-conveyor-belt id="conveyorBelt" class="oj-lg-9 oj-md-9 oj-sm-12 oj-flex-item">
                   <oj-bind-for-each data="[[users]]">
                     <template data-oj-as="user">
-                      <oj-action-card class="demo-card oj-sm-margin-12x-vertical oj-sm-margin-2x-horizontal">
-                        <oj-button id="buttonOpener" display="icons" on-oj-action="[[startToggle]]">
-                          <div class="oj-flex oj-sm-flex-direction-column">
+                      <oj-action-card class="demo-card oj-sm-margin-12x-vertical oj-sm-margin-2x-horizontal cardContent">
+                        <oj-button id="buttonOpener"  display="icons" on-oj-action="[[startToggle]]">
+                          <div class="oj-flex oj-sm-flex-direction-column" >
                             <div class="titleCardContainer">
                               <span>
-                                <oj-bind-text class="titleCardLabel">Nome do Produto:</oj-bind-text>
+                                <oj-bind-text style="color: black;" class="titleCardLabel">Nome do Produto:</oj-bind-text>
                                 <oj-bind-text value="[[user.data.name]]"></oj-bind-text>
                               </span>
                             </div>

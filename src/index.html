@@ -107,14 +107,13 @@
             </div>
 
             <oj-bind-if test="[[selection.state]]">
-              <oj-bind-text  value="[[selection.state().detail.title]]"></oj-bind-text>
+              <oj-bind-text value="[[selection.state().detail.title]]"></oj-bind-text>
             </oj-bind-if>
 
             <div class="containerImageLogo">
               <span class="imageLogo">
                 <img src="./css/images/ocq-logo.png">
               </span>
-              <h1 class="oj-sm-only-hide oj-web-applayout-header-title" title="Application Name"><oj-bind-text value="[[appName]]"></oj-bind-text></h1>
             </div>
           </div>
           <div role="navigation" class="oj-web-applayout-max-width oj-web-applayout-navbar">
